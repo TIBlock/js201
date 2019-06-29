@@ -21,6 +21,12 @@
 // isVowel(99) --> false
 // isVowel({e: 'Elephant'}) --> false
 
+function isVowel(char){
+    return typeof char === 'string'
+    && char.length === 1
+    && 'aeiou'.includes(char.toLowerCase())
+    
+} 
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -36,7 +42,19 @@
 // isOdd(5) --> true
 // isOdd('7') --> false
 // isOdd(3.14) --> false
+function isEven(num){
+    if (!Number.isInteger(num)|| num % 2 !== 0){
+        return false;
+    }else if(num % 2 === 0)
+        return true;
+    }
 
+function isOdd(num){
+    if (!Number.isInteger(num) || num % 2 === 0){
+        return false;
+    }else(num % 2 !== 0)
+        return true;
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

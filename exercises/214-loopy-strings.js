@@ -7,7 +7,13 @@
 //
 // Example:
 // reverse("skoob") --> "books"
-
+function reverse(inString){
+    let string = inString
+    reverseArray = string.split('')  
+    stringReverse = reverseArray.reverse()
+    stringBack = stringReverse.join('')
+    return stringBack
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

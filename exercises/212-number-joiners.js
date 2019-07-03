@@ -53,6 +53,22 @@ function numberJoinerFor(stNum, enNum){
 // numberJoinerFancy(1, 5, '~') --> 1~2~3~4~5
 // numberJoinerFancy(3, 6, '***BANANAS***') --> 1***BANANAS***2***BANANAS***3
 
-function numberJoinerFancy(stNum, enNum){
+function numberJoinerFancy(stNum, enNum, separator){
+    let i = stNum
+    let joinedNums = 0;
+    while (i <= enNum){
+        joinedNums = joinedNums + i;
+        if(i !== enNum && separator !== undefined){
+            joinedNums = joinedNums + separator
+        }
+        else if(i !== enNum){
+            joinedNums = joinedNums + '_'
+        }
+        i++;   
+    }
+    if (stNum === enNum){
+        return stNum.toString()
+    }
+    return joinedNums
     
 }

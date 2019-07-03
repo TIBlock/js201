@@ -5,12 +5,43 @@
 // numberJoinerWhile(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerWhile(12, 14) --> '12_13_14'
 
+function numberJoinerWhile(stNum, enNum){
+    let i = stNum
+    let joinedNums = 0;
+    while (i <= enNum){
+        joinedNums = joinedNums + i;
+        if(i !== enNum){
+            joinedNums = joinedNums + '_';
+        }
+        i++;        
+    }
+    if (stNum === enNum){
+        return stNum.toString()
+    }
+    return joinedNums
+    
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "numberJoinerFor" which does the same thing as "numberJoinerWhile",
 // except using a "for" loop internally.
 
+function numberJoinerFor(stNum, enNum){
+    let i = stNum;
+    let joinedNums = 0;
+    let result = '';
+    for (i; i <= enNum; i++) {  
+        joinedNums = joinedNums + i;
+        if(i !== enNum){ 
+        joinedNums = joinedNums + "_"
+        }
+    }
+    if (stNum === enNum){
+        return stNum.toString()
+    }
+    return joinedNums
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -21,3 +52,7 @@
 // numberJoinerFancy(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerFancy(1, 5, '~') --> 1~2~3~4~5
 // numberJoinerFancy(3, 6, '***BANANAS***') --> 1***BANANAS***2***BANANAS***3
+
+function numberJoinerFancy(stNum, enNum){
+    
+}

@@ -55,8 +55,19 @@ function findLongestWord(string){
 // Example:
 // nicer('mom get the heck in here and bring me a darn sandwich.')
 // > 'mom get the in here and bring me a sandwich.'
-
-
+function nicer(string){
+    let spString = string.split(' ');
+    for (let i = 0; i < spString.length; i++) {
+        if (spString[i] === 'heck'||
+            spString[i] === 'darn'||
+            spString[i] === 'dang'||
+            spString[i] === 'crappy'){
+        let badWords = i   
+        spString.splice(badWords, 1)
+        }    
+    }
+        return spString.join(' ')
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function called "capitalizeAll"

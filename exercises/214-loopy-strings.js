@@ -24,9 +24,25 @@ function reverse(inString){
 // Example:
 // findLongestWord('a book full of dogs') --> 'book'
 function findLongestWord(string){
-    spString = string.split(' ')
-    spString.foreach(function)
+    let spString = string.split(' ');
+    let wdLength = [];
+    for (let i = 0; i < spString.length; i++) {
+        let letterCount = spString[i].length
+        wdLength.push(letterCount);
+        }
+        let longWord = Math.max(...wdLength)
+        
+        let longestWord = wdLength.indexOf(longWord);
+        
+        return spString[longestWord];
+        
     }
+    
+
+//I need to split the string into an array
+//write a for each function to checke the lengths of each word
+//then compare the length of each word together, only keeping the greatest of all
+//then print the location of the array that has the longest word. 
     
 
 

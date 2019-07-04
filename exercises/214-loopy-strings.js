@@ -23,6 +23,11 @@ function reverse(inString){
 //
 // Example:
 // findLongestWord('a book full of dogs') --> 'book'
+function findLongestWord(string){
+    spString = string.split(' ')
+    spString.foreach(function)
+    }
+    
 
 
 

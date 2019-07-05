@@ -8,11 +8,11 @@
 // Example:
 // reverse("skoob") --> "books"
 function reverse(inString){
-    let string = inString
-    reverseArray = string.split('')  
-    stringReverse = reverseArray.reverse()
-    stringBack = stringReverse.join('')
-    return stringBack
+    let string = inString;
+    reverseArray = string.split('') ; 
+    stringReverse = reverseArray.reverse();
+    stringBack = stringReverse.join('');
+    return stringBack;
 }
 
 
@@ -27,10 +27,10 @@ function findLongestWord(string){
     let spString = string.split(' ');
     let wdLength = [];
     for (let i = 0; i < spString.length; i++) {
-        let letterCount = spString[i].length
+        let letterCount = spString[i].length;
         wdLength.push(letterCount);
         }
-        let longWord = Math.max(...wdLength)
+        let longWord = Math.max(...wdLength);
         
         let longestWord = wdLength.indexOf(longWord);
         
@@ -61,13 +61,13 @@ function nicer(string){
         if (spString[i] === 'heck'||
             spString[i] === 'darn'||
             spString[i] === 'dang'||
-            spString[i] === 'crappy'){
-        let badWords = i   
-        spString.splice(badWords, 1)
+            spString[i] === 'crappy');{
+        let badWords = i;
+        spString.splice(badWords, 1);
         }    
     }
-        return spString.join(' ')
-}
+        return spString.join(' ');
+}     
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function called "capitalizeAll"
@@ -77,8 +77,16 @@ function nicer(string){
 // Examples:
 // capitalizeAll('hello world') --> 'Hello World'
 // capitalizeAll('every day is like sunday') --> 'Every Day Is Like Sunday'
+function capitalizeAll(string){
+    let spString = string.split(' ');
+    for (let i = 0; i < spString.length; i++) {
+        spString[i] = spString[i].charAt(0).toUpperCase() + spString[i].substring(1);
+    }
+    return spString.join(' ');
+}
 
 
+// take zero element and capitalize 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function called "split" that does the same thing as String.split
@@ -90,3 +98,50 @@ function nicer(string){
 // split('a-b-c', '-') --> ['a', 'b', 'c']
 // split('APPLExxBANANAxxCHERRY', 'xx') --> ['APPLE', 'BANANA', 'CHERRY']
 // split('xyz', 'r') --> ['xyz']
+function split(myString, separator){
+    let result = [];
+    
+    let startIndex = 0;
+    
+    let notDone = true;
+    
+    while (notDone){
+        let nextIndex = myString.indexOf(separator, startIndex);
+        
+        if (nextIndex !== -1){
+            
+            let nextString = myString.substring(startIndex, nextIndex);
+            
+            if( nextString !== '');
+
+            result.push(nextString);
+
+            startIndex += separator.length + nextString.length;
+        }
+        
+        else {
+          result.push(myString.substring(startIndex));
+          
+          notDone = false;
+            
+        }
+    }
+        return result;
+    
+}
+
+// remove the selected separator from the string then split the string into individual elements
+//bo/alex notes loop through and say if a keep track of the start and end index of every string which willallow you yo
+
+// can use indexOf to find the position
+
+// start a new array  
+
+// one you find the position you can find the index of and pull the substring. 
+
+// find the indexes of the substring and pull the results 
+
+
+// for each methods you use to solve a problem
+
+// what variables do you need to solve this problem. 

@@ -31,11 +31,8 @@ function findLongestWord(string){
         wdLength.push(letterCount);
         }
         let longWord = Math.max(...wdLength);
-        
         let longestWord = wdLength.indexOf(longWord);
-        
         return spString[longestWord];
-        
     }
     
 
@@ -60,18 +57,14 @@ function nicer(string){
     for (let i = 0; i < spString.length; i++) {
         if (String(spString[i]) === 'heck'){
             spString.splice( i , 1 );
-        }
-        else if (String(spString[i]) === 'darn'){
+        }else if (String(spString[i]) === 'darn'){
             spString.splice( i , 1 );
-        }
-        else if (String(spString[i]) === 'dang'){
+        }else if (String(spString[i]) === 'dang'){
             spString.splice( i , 1 );
-        }
-        else if (String(spString[i]) === 'crappy'){
+        }else if (String(spString[i]) === 'crappy'){
             spString.splice( i , 1 );
         }      
-    }
-    return spString.join(' ');
+    }return spString.join(' ');
 }
 
 
@@ -88,8 +81,7 @@ function capitalizeAll(string){
     let spString = string.split(' ');
     for (let i = 0; i < spString.length; i++) {
         spString[i] = spString[i].charAt(0).toUpperCase() + spString[i].substring(1);
-    }
-    return spString.join(' ');
+    }return spString.join(' ');
 }
 
 
@@ -107,34 +99,20 @@ function capitalizeAll(string){
 // split('xyz', 'r') --> ['xyz']
 function split(myString, separator){
     let result = [];
-    
     let startIndex = 0;
-    
     let notDone = true;
-    
     while (notDone){
         let nextIndex = myString.indexOf(separator, startIndex);
-        
         if (nextIndex !== -1){
-            
-            let nextString = myString.substring(startIndex, nextIndex);
-            
+            let nextString = myString.substring(startIndex, nextIndex); 
             if( nextString !== '');
-
             result.push(nextString);
-
             startIndex += separator.length + nextString.length;
+        }else {
+            result.push(myString.substring(startIndex));
+            notDone = false;
         }
-        
-        else {
-          result.push(myString.substring(startIndex));
-          
-          notDone = false;
-            
-        }
-    }
-        return result;
-    
+    }return result;
 }
 
 // remove the selected separator from the string then split the string into individual elements

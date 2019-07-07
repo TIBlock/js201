@@ -11,44 +11,34 @@ function gcd(num1, num2){
     let numArray2 = [];
     let finalArray = [];
     let longestArray;
-    for (let i = 1; i < Math.floor(num1); i++) {
+    let shortestArray;
+    for (let i = 1; i <= Math.floor(num1); i++) {
       if (num1 % i === 0) {
         numArray1.push(i);
         }  
     }
-      for (let i = 1; i < Math.floor(num2); i++) {
+      for (let i = 1; i <= Math.floor(num2); i++) {
         if (num2 % i === 0) {
         numArray2.push(i);
         }  
     } 
-      for (let i = 0; i < numArray1.length || numArray2.length; i++) {
-        if (numArray1.lenth > numArray2.length){
+      for (let i = 0; i < numArray1.length || i < numArray2.length; i++) {
+        if (numArray1.length > numArray2.length){
             longestArray = numArray1;
-        }else {
-            longestArray = numArray2;
+            shortestArray = numArray2;
         }
-        if (numArray1[i] === numArray2[i]) {
-          finalArray.push(longestArray[i]);
+        else {
+            longestArray = numArray2;
+            shortestArray = numArray1;
+          }
+        }
+      for (let i = 0; i < shortestArray.length; i++) {
+        if(longestArray.indexOf(shortestArray[i]) > -1){
+          finalArray.push(shortestArray[i])
+        }        
       }
-      return finalArray;
-  }
-}
-
-    
-    
-//     );(num1 % num2 !== 0){
-//         return 1;
-//     }
-//     else {
-//         return num1 / num2
-
-
-//     }
-
-
-// }
-
-
+        return Math.max(...finalArray);
+      }
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "factors" which is given a number and returns an array
 // containing all its factors.

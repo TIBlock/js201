@@ -50,7 +50,6 @@ function evens(array){
         return element % 2 === 0;
     });
     return myArray;
-
 }
 
 
@@ -63,7 +62,6 @@ function odds(array){
         return element % 2 !== 0;
     });
     return myArray;
-
 }
 
 

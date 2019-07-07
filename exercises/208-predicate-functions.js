@@ -24,8 +24,7 @@
 function isVowel(char){
     return typeof char === 'string'
     && char.length === 1
-    && 'aeiou'.includes(char.toLowerCase())
-    
+    && 'aeiou'.includes(char.toLowerCase());
 } 
 
 
@@ -45,15 +44,18 @@ function isVowel(char){
 function isEven(num){
     if (!Number.isInteger(num)|| num % 2 !== 0){
         return false;
-    }else if(num % 2 === 0)
+    }else if(num % 2 === 0){
         return true;
     }
+}
 
 function isOdd(num){
     if (!Number.isInteger(num) || num % 2 === 0){
         return false;
-    }else(num % 2 !== 0)
+    }else{
+        num % 2 !== 0;
         return true;
+    }
 }
 
 
@@ -124,5 +126,5 @@ function isCapitalCity(state, capital){
         Missouri: 'Jefferson City',    
         Wyoming: 'Cheyenne'
 }
-    return (stateCaps[state] == capital)
+    return (stateCaps[state] == capital);
 }

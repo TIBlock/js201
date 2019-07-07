@@ -12,11 +12,11 @@
 
 function tipAmount(bill, service){
     if (service === 'good'){
-        return bill * .2
+        return bill * .2;
     }else if(service === 'fair'){
-        return bill * .15
+        return bill * .15;
     }else(service === 'poor')
-        return bill * .1
+        return bill * .1;
     }
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "totalAmount" that takes the same arguments as "tipAmount"
@@ -28,14 +28,14 @@ function tipAmount(bill, service){
 // totalAmount(40, 'fair') --> 46
 function totalAmount(bill, service){
     if (service === 'good'){
-        let tip = bill * .2
-        return tip + bill
+        let tip = bill * .2;
+        return tip + bill;
     }else if(service === 'fair'){
-        let tip = bill * .15
-        return tip + bill
+        let tip = bill * .15;
+        return tip + bill;
     }else(service === 'poor')
-        let tip = bill * .1
-        return tip + bill
+        let tip = bill * .1;
+        return tip + bill;
     }
 
 
@@ -50,12 +50,12 @@ function totalAmount(bill, service){
 
 function splitAmount(bill, service, split){
     if (service === 'good'){
-        let totalAmount = ((bill * .2) + bill) / split
-        return totalAmount
+        let totalAmount = ((bill * .2) + bill) / split;
+        return totalAmount;
     }else if(service === 'fair'){
-        let totalAmount = ((bill * .15) + bill) / split
-        return totalAmount
+        let totalAmount = ((bill * .15) + bill) / split;
+        return totalAmount;
     }else(service === 'poor')
-        let totalAmount = ((bill * .1) + bill) / split
-        return totalAmount
+        let totalAmount = ((bill * .1) + bill) / split;
+        return totalAmount;
     }

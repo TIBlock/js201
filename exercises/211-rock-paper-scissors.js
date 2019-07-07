@@ -9,13 +9,12 @@
 function rockPaperScissors(throw1, throw2){
 
     if (throw1 === throw2){
-        return 'draw'
+        return 'draw';
     }
     if (throw1 === 'rock' && throw2 === 'scissors' || throw1 === 'scissors' && throw2 === 'paper' || throw1 === 'paper' && throw2 === 'rock'){
-        return 'player 1'
+        return 'player 1';
     }
     else {
-        return 'player 2'
-    }
-    
+        return 'player 2';
+    }  
 }

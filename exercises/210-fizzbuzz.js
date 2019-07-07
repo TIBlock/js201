@@ -12,10 +12,10 @@
 function fizzbuzz(num){
         var fizzbuzzString = '';
         for (i = 1; i <= num; i++) {
-            if ((i % 3 !== 0) && (i % 5 !==0)) { fizzbuzzString += '.'}
-            if ((i % 3 === 0) && (i % 5 ===0)) { fizzbuzzString += 'fizzbuzz'}
-            if ((i % 3 === 0) && (i % 5 !==0)) { fizzbuzzString += 'fizz'}
-            if ((i % 3 !== 0) && (i % 5 ===0)) { fizzbuzzString += 'buzz'}
+            if ((i % 3 !== 0) && (i % 5 !==0)) { fizzbuzzString += '.'};
+            if ((i % 3 === 0) && (i % 5 ===0)) { fizzbuzzString += 'fizzbuzz'};
+            if ((i % 3 === 0) && (i % 5 !==0)) { fizzbuzzString += 'fizz'};
+            if ((i % 3 !== 0) && (i % 5 ===0)) { fizzbuzzString += 'buzz'};
     }
-    return fizzbuzzString
+    return fizzbuzzString;
 }

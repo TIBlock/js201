@@ -13,9 +13,8 @@ helloDefault(true)
 
 function helloDefault(name){
     if (typeof name !== 'string' || name === '') {
-        return 'Hello, world!'
-    }
-    return 'Hello, ' + name + '!'
+        return 'Hello, world!';
+    }return 'Hello, ' + name + '!';
 
     if(name === ''){
         return 'Hello, world!';

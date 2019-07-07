@@ -6,7 +6,7 @@
 // numberJoinerWhile(12, 14) --> '12_13_14'
 
 function numberJoinerWhile(stNum, enNum){
-    let i = stNum
+    let i = stNum;
     let joinedNums = 0;
     while (i <= enNum){
         joinedNums = joinedNums + i;
@@ -16,10 +16,9 @@ function numberJoinerWhile(stNum, enNum){
         i++;        
     }
     if (stNum === enNum){
-        return stNum.toString()
+        return stNum.toString();
     }
-    return joinedNums
-    
+    return joinedNums;
 }
 
 
@@ -34,13 +33,13 @@ function numberJoinerFor(stNum, enNum){
     for (i; i <= enNum; i++) {  
         joinedNums = joinedNums + i;
         if(i !== enNum){ 
-        joinedNums = joinedNums + "_"
+        joinedNums = joinedNums + "_";
         }
     }
     if (stNum === enNum){
-        return stNum.toString()
+        return stNum.toString();
     }
-    return joinedNums
+    return joinedNums;
 }
 
 
@@ -54,21 +53,20 @@ function numberJoinerFor(stNum, enNum){
 // numberJoinerFancy(3, 6, '***BANANAS***') --> 1***BANANAS***2***BANANAS***3
 
 function numberJoinerFancy(stNum, enNum, separator){
-    let i = stNum
+    let i = stNum;
     let joinedNums = 0;
     while (i <= enNum){
         joinedNums = joinedNums + i;
         if(i !== enNum && separator !== undefined){
-            joinedNums = joinedNums + separator
+            joinedNums = joinedNums + separator;
         }
         else if(i !== enNum){
-            joinedNums = joinedNums + '_'
+            joinedNums = joinedNums + '_';
         }
         i++;   
     }
     if (stNum === enNum){
-        return stNum.toString()
+        return stNum.toString();
     }
-    return joinedNums
-    
+    return joinedNums;
 }

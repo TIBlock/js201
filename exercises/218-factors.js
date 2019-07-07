@@ -34,7 +34,7 @@ function gcd(num1, num2){
         }
       for (let i = 0; i < shortestArray.length; i++) {
         if(longestArray.indexOf(shortestArray[i]) > -1){
-          finalArray.push(shortestArray[i])
+          finalArray.push(shortestArray[i]);
         }        
       }
         return Math.max(...finalArray);
@@ -48,4 +48,12 @@ function gcd(num1, num2){
 // factors(1) --> [1]
 // factors(12) --> [1, 2, 3, 4, 6, 12]
 // factors(42) --> [1, 2, 3, 6, 7, 14, 21, 42]
-
+function factors(num){
+  let numArray = [];
+  for (let i = 1; i <= Math.floor(num); i++) {
+    if (num % i === 0) {
+      numArray.push(i);
+    }  
+  }
+    return numArray;
+}

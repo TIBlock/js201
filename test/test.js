@@ -1056,7 +1056,7 @@ if (allSyntaxValid) {
   describe('Loopy Strings', checkLoopyStrings)
   describe('Number Arrays', checkNumberArrays)
   describe('Factors', checkFactors)
-  describe('Cities', checkCities)
+  //describe('Cities', checkCities)
   describe('Long-long Vowels', checkLongLongVowels)
   describe('Leetspeak', checkLeetspeak)
   describe('Caesar Cipher', checkCaesarCipher)

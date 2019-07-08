@@ -115,18 +115,3 @@ function split(myString, separator){
     }return result;
 }
 
-// remove the selected separator from the string then split the string into individual elements
-//bo/alex notes loop through and say if a keep track of the start and end index of every string which willallow you yo
-
-// can use indexOf to find the position
-
-// start a new array  
-
-// one you find the position you can find the index of and pull the substring. 
-
-// find the indexes of the substring and pull the results 
-
-
-// for each methods you use to solve a problem
-
-// what variables do you need to solve this problem. 

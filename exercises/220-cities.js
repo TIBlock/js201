@@ -6,7 +6,8 @@
 //   { name: 'New York', temperature: 80.0 }
 // ];
 // and returns a new array containing only those cities whose temperature is
-// cooler than 70 degrees.
+// cooler than 70 degrees.   
+
 function coolCities(temp){
     var cities = [
         { name: 'Los Angeles', temperature: 60.0},
@@ -17,7 +18,7 @@ function coolCities(temp){
     var coolCities = cities.filter(function(element){
         return element.temperature < temp;
     });
-    return coolCities
+    return coolCities;
 }
 
 

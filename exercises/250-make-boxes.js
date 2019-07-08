@@ -8,9 +8,16 @@
 // *****
 // *****
 
-function makeSquare() {
-    
+function makeSquare(number) {
+    let num = number;
+    let square = '';
+    for (let i = 1; i <= Math.floor(num); i++) {
+        square += '*';
+    }   
+    square +='\n'
+    return square.repeat(num)
 }
+console.log(makeSquare(8));
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "makeBox" which is given a width and height and returns a

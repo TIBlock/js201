@@ -12,13 +12,14 @@ function makeSquare(number) {
     let num = number;
     let square = '';
     let squareArray = [];
-    for (let i = 1; i <= Math.floor(num); i++) {
-        square += '*';
-    }   
-    square +='\n'
-    square = square.repeat(num)
-    squareArray.push(square)
-    return squareArray.toString('')
+        for (let i = 1; i <= Math.floor(num); i++) {
+            square += '*';
+        }
+    square +='\n';
+    square = square.repeat(num);
+    square= square.substring(0, square.length - 1);
+    squareArray.push(square);      
+    return squareArray.toString()
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

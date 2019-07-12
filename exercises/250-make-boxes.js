@@ -32,10 +32,31 @@ function makeSquare(number) {
 // *    *
 // ******
 
-function makeBox() {
-
+function makeBox(width, height) {
+    let box = '';
+    //Create the end caps for the box
+    let myTop = '*'.repeat(width) + '\n';
+    let myBottom ='*'.repeat(width);
+    let boxMiddle = '';
+    //create the middle lines with spaces between
+    for (let i = 1; i < width; i++) {
+        box = '*' + (' '.repeat(width - 2)) + '*\n';
+    }
+    for (let i = 0; i < height - 2; i++) {
+        boxMiddle += box   
+    }
+    //Combine everything to create what we need. 
+    if (height > 1){
+        box = myTop + boxMiddle + myBottom;
+    } 
+    else if ( height === 1){
+        box = myBottom;
+    }
+    else {
+        box = '';
+    }
+     return box;
 }
-
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "makeBanner" which is given some text and returns a banner
@@ -48,5 +69,5 @@ function makeBox() {
 // ****************************
 
 function makeBanner() {
-
+test
 }

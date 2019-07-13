@@ -68,6 +68,23 @@ function makeBox(width, height) {
 // * Welcome to DigitalCrafts *
 // ****************************
 
-function makeBanner() {
-test
+function makeBanner(string) {
+    let myStr = ' ' + string + ' ';
+    //Creates the top and bottom of the banner
+    let myTop;
+    let myBottom;
+    let strBanner;
+    //Combine everything to make my banner
+    if(string !== ''){
+        strBanner = '*' + myStr + '*\n';
+        myTop = '*'.repeat(myStr.length + 2) + '\n';
+        myBottom ='*'.repeat(myStr.length + 2);
+    }
+    else {
+    myStr = '  '
+    strBanner = '*'+myStr+'*\n';
+    myTop = '*'.repeat(string.length + 4) + '\n';
+    myBottom ='*'.repeat(string.length + 4);    
+    }
+    return myTop + strBanner + myBottom  
 }

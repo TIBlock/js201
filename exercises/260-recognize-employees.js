@@ -15,3 +15,10 @@
 // > ['Great job, Susan!', 'Great job, Anthony!', 'Great job, Bill!']
 //
 // Hint: What is the best data structure for the employees of the month list?
+function recognizeEmployees(array1, array2){
+    //check to see if the outstanding employee is in the second array first,
+    // then remove it from the array and apply a string to each array item in array 1
+    //use "problem solving with code" search for an item in an array.
+    
+
+}

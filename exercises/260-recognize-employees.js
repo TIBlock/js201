@@ -15,23 +15,35 @@
 // > ['Great job, Susan!', 'Great job, Anthony!', 'Great job, Bill!']
 //
 // Hint: What is the best data structure for the employees of the month list?
-function recognizeEmployees(array1, array2){
-    //check to see if the outstanding employee is in the second array first,
-    // then remove it from the array and apply a string to each array item in array 1
-    //use "problem solving with code" search for an item in an array.
+function recognizeEmployees(array1, array2) {
+    let greatJob = [];
+    array1.forEach(function(name) {
+        array2.indexOf(name)
+        if(array2.indexOf(name) !== -1){
+            greatJob.push('Outstanding job, ' + name + '!');
+        }
+        else{
+            greatJob.push('Great job, ' + name + '!');
 
-//     for (let i = 0; i < array2.length; i++) {
-//         let outstandingEmps = array1.find(function(element) {
-//             return element === array2[i]
-//         });
-//         return outstandingEmps;
-//     }
+        }
+        
+    });
+    return greatJob;
+}
+
+var result = recognizeEmployees(['Susan', 'Anthony', 'Bill'], ['Bill', 'Susan'])
+console.log(result);
+
+// function recognizeEmployees(array1,array2){
+//     let greatJob = [];
+//     array1.forEach(function(element) {
+//         for (let i = 0; i < array2.length; i++) {
+//             if(element === array2[i]) {
+//                 greatJob.push('Outstanding job, ' + element + '!');
+//             }
+//             else if (element !== array2[i])
+//                 greatJob.push('Great job, ' + element + '!');
+//         }
+//     });
+//     return greatJob;
 // }
-//may want to try and use counting unique items in an array instead. 
-
-for (let i = 0; i < array1.length; i++) {
-    if (array1.indexOf() !== -1) {
-        let outEmpLoc = i;
-    }    
-}
-}

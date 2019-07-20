@@ -7,8 +7,10 @@
 // Examples:
 // alphaSort(['b', 'a', 'c'])
 // > ['a', 'b', 'c']
-
-
+function alphaSort(array){
+    array.sort()
+    return array
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "strLengthSort" that sorts an array of strings by how long
@@ -17,6 +19,15 @@
 // Examples:
 // strLengthSort(['Apple', 'Banana', 'Cherry'])
 // > ['Apple', 'Cherry', 'Banana']
+function strLengthSort(array){
+
+    array.sort(function(a,b) {
+        
+        return a.length - b.length;
+
+    });
+    return array
+}
 
 
 
@@ -38,3 +49,25 @@
 //   [4, 5]
 // ])
 // > [[2], [4, 5], [9, 1, 9]]
+function sumSort(array){
+    let result = [];
+    array.forEach(function(arrayOfNumbers){
+        let sum = addedArray(arrayOfNumbers)
+        result.push(sum)
+
+    });
+console.log(result);
+}
+sumSort([
+      [9, 1, 9],
+      [2],
+      [4, 5]
+    ])
+
+function addedArray(numArray){
+    let arraySum = 0;
+        for (let i = 0; i < numArray.length; i++) {
+            arraySum += numArray[i] 
+        }
+        return arraySum
+}

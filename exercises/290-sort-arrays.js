@@ -52,10 +52,13 @@ function strLengthSort(array){
 function sumSort(array){
     let result = [];
     array.forEach(function(arrayOfNumbers){
-        let sum = addedArray(arrayOfNumbers)
-        result.push(sum)
-
+        let arraySum = addedArray(arrayOfNumbers)
+        let arrayKeySum = {[arraySum]:arrayOfNumbers} 
+        result.push(arrayKeySum);
     });
+    result.sort(function(a,b){
+        return a[1] - b[1];
+    })
 console.log(result);
 }
 sumSort([

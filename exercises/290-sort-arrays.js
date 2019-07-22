@@ -49,28 +49,42 @@ function strLengthSort(array){
 //   [4, 5]
 // ])
 // > [[2], [4, 5], [9, 1, 9]]
-function sumSort(array){
-    let result = [];
-    array.forEach(function(arrayOfNumbers){
-        let arraySum = addedArray(arrayOfNumbers)
-        let arrayKeySum = {[arraySum]:arrayOfNumbers} 
-        result.push(arrayKeySum);
-    });
-    result.sort(function(a,b){
-        return a[1] - b[1];
-    })
-console.log(result);
-}
-sumSort([
-      [9, 1, 9],
-      [2],
-      [4, 5]
-    ])
+// function sumSort(array){
+//     let result = [];
+//     array.forEach(function(arrayOfNumbers){
+//         let arraySum = addedArray(arrayOfNumbers)
+//         let arrayKeySum = {[arraySum]:arrayOfNumbers} 
+//         result.push(arrayKeySum);
+//     });
+// }
 
+function sumSort(arrayOfArrays)
+{
+    return arrayOfArrays.sort(compareSums);
+}
+// compares the sums of the arrays and giving a positive number a 1 and a negative number a -1.
+function compareSums(arrayA, arrayB){
+    let compareResult;
+    if (addedArray(arrayA) > addedArray(arrayB)){
+        compareResult = 1;
+    } else if (addedArray(arrayA) < addedArray(arrayB)){
+        compareResult = -1;
+    } else
+    compareResult = 0;
+
+    return compareResult;
+}
+// adds the sums of each array in the array and outputs it in a new array.
 function addedArray(numArray){
     let arraySum = 0;
-        for (let i = 0; i < numArray.length; i++) {
-            arraySum += numArray[i] 
-        }
-        return arraySum
+    for (let i = 0; i < numArray.length; i++) {
+        arraySum += numArray[i] ;
+    }
+    return arraySum;
 }
+
+// exampled of a more compact compareSums
+
+// function compareSums(arrayA, arrayB){
+//     return addedArray(arrayA) - addedArray(arrayB);
+// }
